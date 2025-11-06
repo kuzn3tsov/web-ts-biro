@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.ts-biro.hr/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg</image:loc>
+      <image:title>TS-Biro Logo - Profesionalno računovodstvo Sisak</image:title>
+      <image:caption>TS-Biro - Obiteljska računovodstvena tvrtka</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.ts-biro.hr/images/businesswoman-using-laptop.jpg</image:loc>
+      <image:title>Profesionalno računovodstvo TS-Biro</image:title>
+      <image:caption>Naš tim stručnjaka pruža kvalitetne računovodstvene usluge</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.ts-biro.hr/knjigovodstvo-racunovodstvo.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg</image:loc>
+      <image:title>Knjigovodstvene i računovodstvene usluge TS-Biro</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.ts-biro.hr/place-kadrovska-evidencija.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg</image:loc>
+      <image:title>Obračun plaća i kadrovska evidencija TS-Biro</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.ts-biro.hr/financijsko-poslovno-savjetovanje.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg</image:loc>
+      <image:title>Financijsko i poslovno savjetovanje TS-Biro</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.ts-biro.hr/sudsko-vjestacenje.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg</image:loc>
+      <image:title>Sudsko vještačenje TS-Biro</image:title>
+    </image:image>
+  </url>
+
+</urlset>

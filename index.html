@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lem Treursić">
+    <meta name="description" content="TS-Biro - Obiteljska računovodstvena tvrtka pruža sve financijske usluge: knjigovodstvo, računovodstvo i obračun plaća.">
+    <title>TS-Biro | Obiteljska računovodstvena tvrtka - Knjigovodstvo Sisak</title>
+
+    <!-- Open Graph & Twitter tags -->
+    <meta property="og:title" content="TS-Biro | Obiteljska računovodstvena tvrtka">
+    <meta property="og:description"
+        content="Pouzdano računovodstvo za vaš poslovni uspjeh. Knjigovodstvo, računovodstvo i obračun plaća u Sisku.">
+    <meta property="og:image" content="https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/critical.css" as="style">
+    <link rel="preload" href="css/non-critical.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="fonts/Figtree-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Domine-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+
+    <!-- Load Critical CSS First -->
+    <link rel="stylesheet" href="css/critical.css">
+
+    <!-- Load Non-Critical CSS Asynchronously -->
+    <link rel="stylesheet" href="css/non-critical.css" media="print" onload="this.media='all'">
+
+    <!-- JavaScript in head with defer -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "TS-Biro Knjigovodstveni Servis",
+        "description": "Vodeći knjigovodstveni servis u Hrvatskoj koji nudi sveobuhvatne knjigovodstvene usluge, obračun plaća i porezno savjetovanje",
+        "url": "https://www.ts-biro.hr",
+        "telephone": "+385-91-521-2770",
+        "email": "info@ts-biro.hr",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ferde Livadića 29",
+            "addressLocality": "Sisak",
+            "postalCode": "44000",
+            "addressCountry": "HR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.4852,
+            "longitude": 16.3764
+        },
+        "openingHours": "Mo-Fr 08:00-16:00",
+        "serviceType": [
+            "Knjigovodstvene usluge",
+            "Obračun plaća",
+            "Porezno savjetovanje",
+            "Računovodstveni servis"
+        ],
+        "areaServed": "Hrvatska",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Računovodstvene Usluge",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Knjigovodstvo",
+                        "description": "Kompletno vođenje poslovnih knjiga za vaše poduzeće"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Računovodstvo",
+                        "description": "Stručno vođenje financijske evidencije i analiza poslovanja"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Obračun plaća",
+                        "description": "Precizan obračun plaća i doprinosa za vaše zaposlenike"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Početna",
+                "item": "https://www.ts-biro.hr/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Usluge",
+                "item": "https://www.ts-biro.hr/#usluge"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "O nama",
+                "item": "https://www.ts-biro.hr/#onama"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Česta pitanja",
+                "item": "https://www.ts-biro.hr/#faq"
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Klijenti",
+                "item": "https://www.ts-biro.hr/#klijenti"
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Kontakt",
+                "item": "https://www.ts-biro.hr/#kontakt"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TS-Biro",
+        "alternateName": "TS-Biro Knjigovodstveni Servis",
+        "url": "https://www.ts-biro.hr",
+        "logo": "https://www.ts-biro.hr/images/TS-Biro-Circle-logo.svg",
+        "description": "Obiteljska računovodstvena tvrtka pruža sve financijske usluge: knjigovodstvo, računovodstvo i obračun plaća u Sisku i široj regiji",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ferde Livadića 29",
+            "addressLocality": "Sisak",
+            "postalCode": "44000",
+            "addressCountry": "HR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+385-91-521-2770",
+            "contactType": "customer service",
+            "email": "info@ts-biro.hr",
+            "availableLanguage": ["hr", "en"]
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- WebSite Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TS-Biro",
+        "url": "https://www.ts-biro.hr",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.ts-biro.hr/pretraga?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "description": "Obiteljska računovodstvena tvrtka TS-Biro nudi profesionalne usluge knjigovodstva, računovodstva i obračuna plaća u Sisku"
+    }
+    </script>
+
+    <!-- FAQ Schema Markup - UPDATED WITH EXTENDED FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Koje usluge nudi TS-Biro?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TS-Biro nudi sveobuhvatne računovodstvene usluge uključujući knjigovodstvo, računovodstvo, obračun plaća, porezno savjetovanje, financijsko izvještavanje, sudsko vještačenje i poslovno savjetovanje za poduzeća, obrtnike i neprofitne organizacije."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Gdje se nalazite?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Naš ured nalazi se na adresi Ferde Livadića 29 u Sisku, s lako dostupnom lokacijom i parkingom za naše klijente. Radimo s klijentima iz cijele Hrvatske."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Koliko koštaju vaše usluge?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cijene naših usluga ovise o opsegu poslovanja i specifičnim potrebama klijenta. Kontaktirajte nas za besplatnu procjenu i personaliziranu ponudu prilagođenu vašim potrebama."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kako započeti suradnju s nama?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pošaljite nam upit putem obrasca na stranici, e-mailom ili telefonom. Navedite osnovne informacije o svom poslovanju: vrstu organizacije (obrt, d.o.o., j.d.o.o., udruga), broj zaposlenih, status u PDV sustavu, djelatnost i prosječni mjesečni broj računa. Kontaktirat ćemo vas za dodatne informacije i ponudu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Radite li isključivo lokalno?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ne – suradnja može biti digitalna ili osobna, ovisno o vašim potrebama. Radimo s klijentima iz cijele Hrvatske, uključujući Sisak, Dubrovnik, Zagreb i Istru, a imamo i klijente u Sloveniji. Po potrebi primamo i fizičku dostavu dokumentacije."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kako dostavljam dokumente ako radimo digitalno?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dokumente možete slati e-mailom, osobno ili putem postojećih digitalnih sustava za računovodstvo i fiskalizaciju. Od 01.01.2026., zahvaljujući Fiskalizaciji 2.0 i mogućnosti zaprimanja dokumenata preko posrednika u programu za prvi val obveznika, proces će biti još jednostavniji i brži."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Radite li s obrtima, d.o.o., j.d.o.o. i neprofitnim organizacijama?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da, pružamo usluge za sve vrste poslovnih subjekata, uključujući obrte (paušalne i klasične), d.o.o., j.d.o.o. te udruge i neprofitne organizacije. Prilagođavamo usluge specifičnim potrebama svakog tipa organizacije."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Radite li s novootvorenim poduzećima i obrtima?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da – nudimo posebnu podršku za početnike, uključujući savjete pri registraciji, odabir pravnog oblika, izradu plana poslovanja po potrebi i vođenje prvih financijskih koraka."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kako se formira cijena usluge?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cijena se formira individualno, ovisno o vrsti poslovnog subjekta i opsegu usluga (knjigovodstvo, plaće, planovi, vještačenja itd.). Za točnu ponudu možete ispuniti obrazac na stranici, poslati e-mail ili nas kontaktirati telefonom."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mogu li prebaciti svoje poslovanje s drugog knjigovodstva?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da – preuzimamo dokumentaciju i osiguravamo bezbolan prijelaz na naše vođenje knjiga, bilo digitalno ili osobno. Pomažemo u svim formalnostima prijenosa."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Radite li i porezna savjetovanja?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da – savjetujemo u vezi poreznih obveza, kako bi vaše poslovanje bilo u skladu sa zakonima. Pružamo podršku u optimizaciji poreznih obveza."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Radite li vještačenja za fizičke osobe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da – izrađujemo financijska vještačenja za sud te preliminarna financijska vještačenja, koja pomažu da procijenite isplativost eventualnog sudskog postupka."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mogu li dogovoriti samo određene usluge, npr. obračun plaća?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Da – iako uglavnom vodimo cjelovito knjigovodstvo, moguće je ugovoriti djelomične usluge, poput obračuna plaća, izrade završnog računa, plana poslovanja ili vještačenja."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Koliko brzo mogu očekivati odgovor na upit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Odgovaramo u roku od 24 sata (radnim danom). Naš tim je dostupan za brzu komunikaciju i rješavanje svih vaših upita."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Preskoči</a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+            <a href="index.html" class="logo" aria-label="TS-Biro - Početna stranica">
+                <img src="TS-Biro-Circle-logo.svg" width="128" height="50"
+                    alt="TS-Biro Logo - Obiteljska računovodstvena tvrtka | Knjigovodstvo Sisak, računovodstvo i obračun plaća"
+                    title="TS-Biro - Pouzdano računovodstvo za vaš poslovni uspjeh" loading="eager" decoding="async"
+                    fetchpriority="high" itemprop="logo" class="logo-img">
+            </a>
+                <nav aria-label="Glavna navigacija">
+                    <button class="mobile-menu-btn" aria-expanded="false" aria-controls="primary-navigation"
+                        aria-label="Toggle navigation menu">
+                        <span class="sr-only">Meni</span>
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <ul class="nav-menu" id="primary-navigation">
+                        <li class="nav-item"><a href="index.html#usluge" class="nav-link">Usluge</a></li>
+                        <li class="nav-item"><a href="index.html#onama" class="nav-link">O nama</a></li>
+                        <li class="nav-item"><a href="index.html#klijenti" class="nav-link">Klijenti</a></li>
+                        <li class="nav-item"><a href="index.html#kontakt" class="nav-link">Kontakt</a></li>
+                        <li class="nav-item"><a href="knjigovodstvo-racunovodstvo.html" class="nav-link">Računovodstvo</a></li>
+                        <li class="nav-item"><a href="place-kadrovska-evidencija.html" class="nav-link">Plaće</a></li>
+                        <li class="nav-item"><a href="financijsko-poslovno-savjetovanje.html" class="nav-link">Savjetovanje</a></li>
+                        <li class="nav-item"><a href="sudsko-vjestacenje.html" class="nav-link">Vještačenje</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-slider">
+                <div class="hero-slides">
+                    <!-- Slide 1: Home -->
+                    <div class="hero-slide active" data-slide="home">
+                        <div class="hero-content">
+                            <h1>Tvoja sigurnost. Tvoj servis. Tvoje savjetništvo.</h1>
+                            <p>Obiteljska firma s više od 30 godina iskustva u financijama, računovodstvu i vještačenjima.</p>
+                            <p>Vodimo vaše poslovne knjige stručno, točno i uz mogućnost digitalnog poslovanja.</p>
+                            <p>Radimo s klijentima iz cijele Hrvatske i pružamo potpunu knjigovodstvenu, financijsku i savjetodavnu podršku.</p>
+                            <div class="hero-btns">
+                                <a href="#kontakt" class="btn">Zatražite ponudu</a>
+                                <a href="#usluge" class="btn btn-secondary">Naše usluge</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Klijenti -->
+                    <div class="hero-slide" data-slide="klijenti">
+                        <div class="hero-content">
+                            <h1>Cjelovite knjigovodstvene, financijske i savjetodavne usluge, za obrt, d.o.o., j.d.o.o. i neprofitne
+                            organizacije.</h1>
+                            <ul>
+                                <li><strong>d.o.o. i j.d.o.o.</strong> - vođenje knjigovodstva, obračun plaća, izrada poreznih prijava i financijskih izvještaja</li>
+                                <li><strong>Obrti (klasični i paušalni)</strong> - vođenje knjiga i evidencije, izrada poreznih prijava prilagođenih malim i srednjim poduzetnicima.</li>
+                                <li><strong>Udruge i neprofitne organizacije</strong> - vođenje financija, izrada izvještaja, planiranje projekata i savjetovanje u skladu sa zakonskim propisima</li>
+                            </ul>
+                            <div class="hero-btns">
+                                <a href="knjigovodstvo.html" class="btn">Saznajte više</a>
+                                <a href="#kontakt" class="btn btn-secondary">Zatražite ponudu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Slider Navigation -->
+                <div class="hero-slider-nav">
+                    <button class="slider-prev" aria-label="Prethodni slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <button class="slider-dot active" data-slide="home" aria-label="Prikaži početni slide"></button>
+                        <button class="slider-dot" data-slide="klijenti" aria-label="Prikaži slide klijenti"></button>
+                    </div>
+                    <button class="slider-next" aria-label="Sljedeći slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Services Section -->
+        <section id="usluge" class="section" aria-labelledby="usluge-heading">
+            <div class="container">
+                <h2 id="usluge-heading" class="section-title">Naše usluge</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-book fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Računovodstvene usluge</h3>
+                        <p>Pružamo cjelovite računovodstvene usluge prilagođene vašem poslovanju u skladu sa zakonskim propisima.</p>
+                        <a href="knjigovodstvo-racunovodstvo.html" class="btn">Saznajte više<span class="sr-only"> o
+                                računovodstvenim uslugama</span></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-calculator fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Plaće i kadrovska evidencija</h3>
+                        <p>Vodimo obračun plaća i kadrovske evidencije, prilagođeno potrebama vaše tvrtke i zaposlenika.</p>
+                        <a href="place-kadrovska-evidencija.html" class="btn">Saznajte više<span class="sr-only"> o obračunu
+                                plaća</span></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Financijsko i poslovno savjetovanje</h3>
+                        <p>Pomažemo poduzetnicima i organizacijama u planiranju i vođenju poslovanja.</p>
+                        <a href="financijsko-poslovno-savjetovanje.html" class="btn">Saznajte više<span class="sr-only"> o
+                                uslugama savjetovanja</span></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-balance-scale fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Vještačenja</h3>
+                        <p>Pružamo financijska i računovodstvena vještačenja te stručne analize za različite potrebe.</p>
+                        <a href="sudsko-vjestacenje.html" class="btn">Saznajte više<span class="sr-only"> o
+                                uslugama vještačenja</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="onama" class="section section-light" aria-labelledby="onama-heading">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2 id="onama-heading">TS Biro d.o.o. je obiteljska knjigovodstvena tvrtka iz Siska, koju vode Slobodan Treursić, dipl. ekonomist i stalni
+                        sudski vještak za financije i Maja Kovačević, dipl. ekonomist.</h2>
+                        <p>Naša obiteljska tradicija donosi više od 30 godina iskustva u financijama, računovodstvu, kontrolingu i vještačenjima.</p>
+                        <p>Naš pristup temelji se na točnosti, povjerenju i osobnom odnosu.</p>
+                        <p>Ovisno o potrebama klijenta, poslovanje može biti u potpunosti digitalno ili uz fizičku dostavu dokumentacije – onako
+                        kako vama najviše odgovara.</p>
+                        <p>Naši dosadašnji klijenti došli su isključivo po preporuci, što najbolje govori o kvaliteti i povjerenju koje gradimo.</p>
+                        <p>TS-biro d.o.o. spaja tradiciju i stručnost s modernim načinom rada– tu smo da budete mirni i sigurni u svoje poslovanje.</p>
+                        <div class="stats" role="group" aria-label="Statistike o tvrtki">
+                            <div class="stat">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Godina iskustva u financijama, računovodstvu i savjetovanju</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">40+</span>
+                                <span class="stat-label">Trenutno aktivni klijenti širom Hrvatske i regije</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Posvećenost preciznom i profesionalnom radu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="businesswoman-using-laptop.jpg" width="600" height="400"
+                            alt="Profesionalna računovođa koristi laptop u modernom uredu TS-Biro." loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section id="faq" class="section section-light" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading" class="section-title">Često postavljana pitanja</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                            Kako započeti suradnju s nama?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq1" class="faq-answer" role="region">
+                            <p>Pošaljite nam upit putem obrasca na stranici, e-mailom ili telefonom. Ako je upit za knjigovodstvene usluge, u upitu nam možete navesti osnovne informacije o svom poslovanju, poput:</p>
+                            <ul>
+                                <li>vrste organizacije (obrt, d.o.o., j.d.o.o., udruga itd.),</li>
+                                <li>broja zaposlenih,</li>
+                                <li>statusa u PDV sustavu (dali ste obveznik PDV-a ili ne),</li>
+                                <li>djelatnosti i područja rada,</li>
+                                <li>prosječnog mjesečnog broja ulaznih i izlaznih računa.</li>
+                            </ul>
+                            <p>Ako je upit za neki drugi segment (npr. plaće, savjetovanje, vještačenja), dovoljno je navesti koja vas usluga zanima i eventualne osnovne informacije koje smatrate važnima.</p>
+                            <p>Na temelju upita, eventualno ćemo vas kontaktirati za dodatne informacije, poslati ponudu, a ako ste zainteresirani,
+                            dogovaramo daljnje korake suradnje.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                            Radite li isključivo lokalno?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq2" class="faq-answer" role="region">
+                            <p>Ne – suradnja može biti digitalna ili osobna, ovisno o vašim potrebama. Radimo s klijentima iz cijele Hrvatske,
+                            uključujući Sisak, Dubrovnik, Zagreb i Istru, a imamo i klijente u Sloveniji. Po potrebi primamo i fizičku dostavu
+                            dokumentacije</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                            Kako dostavljam dokumente ako radimo digitalno?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq3" class="faq-answer" role="region">
+                            <p>Dokumente možete slati e-mailom, osobno ili putem postojećih digitalnih sustava za računovodstvo i fiskalizaciju. Od
+                            01.01.2026., zahvaljujući Fiskalizaciji 2.0 i mogućnosti zaprimanja dokumenata preko posrednika u programu za prvi val
+                            obveznika, proces će biti još jednostavniji i brži.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                            Radite li s obrtima, d.o.o., j.d.o.o. i neprofitnim organizacijama?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq4" class="faq-answer" role="region">
+                            <p>Da, kao što smo već naveli – pružamo usluge za sve vrste poslovnih subjekata, uključujući obrte (paušalne i klasične),
+                            d.o.o., j.d.o.o. te udruge i neprofitne organizacije.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                            Radite li s novootvorenim poduzećima i obrtima?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq5" class="faq-answer" role="region">
+                            <p>Da – nudimo posebnu podršku za početnike, uključujući savjete pri registraciji, odabir pravnog oblika, izradu plana
+                            poslovanja po potrebi i vođenje prvih financijskih koraka.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+                            Kako se formira cijena usluge?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq6" class="faq-answer" role="region">
+                            <p>Cijena se formira individualno, ovisno o vrsti poslovnog subjekta i opsegu usluga (knjigovodstvo, plaće, planovi,
+                            vještačenja itd.). Za točnu ponudu možete ispuniti obrazac na stranici, poslati e-mail ili nas kontaktirati telefonom.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq7">
+                            Mogu li prebaciti svoje poslovanje s drugog knjigovodstva?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq7" class="faq-answer" role="region">
+                            <p>Da – preuzimamo dokumentaciju i osiguravamo bezbolan prijelaz na naše vođenje knjiga, bilo digitalno ili osobno.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq8">
+                            Radite li i porezna savjetovanja?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq8" class="faq-answer" role="region">
+                            <p>Da – savjetujemo u vezi poreznih obveza, kako bi vaše poslovanje bilo u skladu sa zakonima.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq9">
+                            Radite li vještačenja za fizičke osobe?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq9" class="faq-answer" role="region">
+                            <p>Da – izrađujemo financijska vještačenja za sud te preliminarna financijska vještačenja, koja pomažu da procijenite
+                            isplativost eventualnog sudskog postupka.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq10">
+                            Mogu li dogovoriti samo određene usluge, npr. obračun plaća?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq10" class="faq-answer" role="region">
+                            <p>Da – iako uglavnom vodimo cjelovito knjigovodstvo, moguće je ugovoriti djelomične usluge, poput obračuna plaća, izrade
+                            završnog računa, plana poslovanja ili vještačenja.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq11">
+                            Koliko brzo mogu očekivati odgovor na upit?
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq11" class="faq-answer" role="region">
+                            <p>Odgovaramo u roku od 24 sata (radnim danom).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Testimonials Section -->
+    <section id="klijenti" class="section">
+        <div class="container">
+            <h2 class="section-title">Što kažu naši klijenti</h2>
+            <div class="testimonials-container">
+                <div class="testimonials">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"Izvrsna knjigovotkinja – profesionalna, pouzdana i uvijek spremna pomoći. Sve je uvijek točno, uredno i na vrijeme.
+                            Jasno objašnjava sve što treba znati, što uvelike olakšava poslovanje. Uvijek dostupna i strpljiva, s velikim znanjem i
+                            iskustvom. Preporučujem je svima koji žele bezbrižno i sigurno voditi svoje poslovne knjige."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Kristina Franjko</p>
+                            <p class="author-company">Direktor, FEL FLAVO d.o.o.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Kao mali obrtnik, cijenim osobni pristup i brzu reakciju na sva moja pitanja. Obračun plaća
+                                i sve porezne obaveze riješeni su na vrijeme i bez greške."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Lem Treursić</p>
+                            <p class="author-company">Vlasnik, Obrt Lemgenda</p>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Sa tvrtkom TS-biro d.o.o. surađujemo oko 2 godine. Iako je naša tvrtka registrirana u Zagrebu, a posao vodimo iz
+                            Dubrovnika, svi problemi se rješavaju u vrlo kratkom roku. Dokumentaciju dostavljamo e-mailom, a oni su uvijek dostupni,
+                            pažljivo nas saslušaju i daju odgovor u najkraćem mogućem roku. Jako su ljubazni, komunikativni i susretljivi – za svaku
+                            preporuku! Već smo ih preporučili nekim našim strankama. Svaka čast, samo nastavite tako!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="author-name">Marko Krmek</p>
+                            <p class="author-company">Direktor, Galerion d.o.o.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav" role="navigation" aria-label="Navigacija iskustava klijenata">
+                    <button class="testimonial-prev" aria-label="Prethodno iskustvo">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots">
+                        <button class="testimonial-dot active" aria-label="Prikaži iskustvo 1" data-index="0"></button>
+                        <button class="testimonial-dot" aria-label="Prikaži iskustvo 2" data-index="1"></button>
+                        <button class="testimonial-dot" aria-label="Prikaži iskustvo 3" data-index="2"></button>
+                    </div>
+                    <button class="testimonial-next" aria-label="Sljedeće iskustvo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Section -->
+        <section id="kontakt" class="section section-light" aria-labelledby="kontakt-heading">
+            <div class="container">
+                <h2 id="kontakt-heading" class="section-title">Kontaktirajte nas</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Informacije</h3>
+                        <div class="contact-item">
+                            <h4><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Adresa</h4>
+                            <p>Ferde Livadića 29, 44000 Sisak</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4><i class="fas fa-phone" aria-hidden="true"></i> Telefon</h4>
+                            <p><a href="tel:+385915212770">+385 91 521 2770</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4><i class="fas fa-phone" aria-hidden="true"></i> Telefon</h4>
+                            <p><a href="tel:+38598376475">+385 98 376 475</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4><i class="fas fa-envelope" aria-hidden="true"></i> Email</h4>
+                            <p><a href="mailto:info@ts-biro.hr">info@ts-biro.hr</a></p>
+                        </div>
+
+                        <!-- Map Section -->
+                        <div class="map-container">
+                            <h4><i class="fas fa-map" aria-hidden="true"></i> Pronađite nas</h4>
+                            <div class="map-placeholder">
+                                <iframe
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=16.351888775825504%2C45.501688630332026%2C16.358787417411808%2C45.50409488772675&amp;layer=mapnik&amp;marker=45.502891771885075%2C16.355338096618652"
+                                    style="border: 1px solid black"
+                                    title="Karta lokacije TS-Biro ureda na adresi Ferde Livadića 29, Sisak"
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                            <p class="map-note">
+                                <a href="https://www.openstreetmap.org/?mlat=45.502892&amp;mlon=16.355338#map=18/45.502892/16.355338&amp;layers=N"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Pogledajte veću kartu<span class="sr-only"> TS-Biro lokacije</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Pošaljite upit</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    <span>Ime i prezime *</span>
+                                </label>
+                                <input type="text" id="name" name="name" required aria-required="true"
+                                    aria-describedby="name-help" autocomplete="name">
+                                <span id="name-help" class="sr-only">Obavezno polje</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>Email adresa *</span>
+                                </label>
+                                <input type="email" id="email" name="email" required aria-required="true"
+                                    aria-describedby="email-help" autocomplete="email">
+                                <span id="email-help" class="sr-only">Obavezno polje</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <span>Broj telefona</span>
+                                </label>
+                                <input type="tel" id="phone" name="phone" aria-describedby="phone-help"
+                                    autocomplete="tel">
+                                <span id="phone-help" class="sr-only">Opcionalno polje</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">
+                                    <i class="fas fa-building" aria-hidden="true"></i>
+                                    <span>Tvrtka</span>
+                                </label>
+                                <input type="text" id="company" name="company" aria-describedby="company-help"
+                                    autocomplete="organization">
+                                <span id="company-help" class="sr-only">Opcionalno polje</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">
+                                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                                    <span>Usluga od interesa</span>
+                                </label>
+                                <select id="service" name="service" aria-describedby="service-help">
+                                    <option value="">Odaberite uslugu</option>
+                                    <option value="knjigovodstvo">Računovodstvo</option>
+                                    <option value="ostalo">Ostalo</option>
+                                </select>
+                                <span id="service-help" class="sr-only">Opcionalno polje</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment" aria-hidden="true"></i>
+                                    <span>Poruka *</span>
+                                </label>
+                                <textarea id="message" name="message" rows="5" required aria-required="true"
+                                    aria-describedby="message-help"></textarea>
+                                <span id="message-help" class="sr-only">Obavezno polje</span>
+                            </div>
+                            <button type="submit" class="btn">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Pošalji upit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" itemscope itemtype="https://schema.org/AccountingService">
+                        <img src="TS-Biro-Circle-logo.svg" width="255" height="100"
+                            alt="TS-Biro Logo - Obiteljska računovodstvena tvrtka | Knjigovodstvo, računovodstvo i financijsko savjetovanje"
+                            title="TS-Biro - Profesionalno računovodstvo Sisak" loading="lazy" decoding="async" itemprop="logo"
+                            class="logo-img">
+                    </div>
+                    <p>Tvoja sigurnost. Tvoj servis. Tvoje savjetništvo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Pratite nas na Facebooku"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Pratite nas na LinkedInu"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Pratite nas na Instagramu"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Usluge</h4>
+                    <ul>
+                        <li><a href="knjigovodstvo-racunovodstvo.html">Računovodstvo</a></li>
+                        <li><a href="place-kadrovska-evidencija.html">Plaće</a></li>
+                        <li><a href="financijsko-poslovno-savjetovanje.html">Savjetovanje</a></li>
+                        <li><a href="sudsko-vjestacenje.html">Vještačenje</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Linkovi</h4>
+                    <ul>
+                        <li><a href="#onama">O nama</a></li>
+                        <li><a href="#klijenti">Klijenti</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ferde Livadića 29, Sisak</li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+385915212770">+385 91 521 2770</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+38598376475">+385 98 376 475</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@ts-biro.hr">info@ts-biro.hr</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TS-Biro. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" role="dialog" aria-labelledby="cookie-heading"
+        aria-describedby="cookie-desc">
+        <div class="cookie-content">
+            <p id="cookie-desc">Ova web stranica koristi kolačiće kako bi osigurala najbolje iskustvo na našoj web
+                stranici.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-small">Prihvati</button>
+                <button id="rejectCookies" class="btn btn-small btn-secondary">Odbij</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTop" class="back-to-top" aria-label="Povratak na vrh stranice">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </a>
+</body>
+</html>
