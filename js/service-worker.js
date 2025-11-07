@@ -1,21 +1,21 @@
-// service-worker.js - Update URLs to match new menu structure
-const CACHE_NAME = 'ts-biro-v4'; // Increment version
+// service-worker.js - Updated URLs for GitHub Pages
+const CACHE_NAME = 'ts-biro-v4';
 const CRITICAL_URLS = [
-    '/',
-    '/index.html',
-    '/css/critical.css',
-    '/js/script.js',
-    '/images/TS-Biro-Circle-logo.svg',
-    '/images/icons/favicon.ico'
+    './',
+    './index.html',
+    './css/critical.css',
+    './js/script.js',
+    './images/TS-Biro-Circle-logo.svg',
+    './images/icons/favicon.ico'
 ];
 
 const NON_CRITICAL_URLS = [
-    '/css/non-critical.css',
-    '/config/manifest.json',
-    '/knjigovodstvo-racunovodstvo.html',
-    '/place-kadrovska-evidencija.html',
-    '/financijsko-poslovno-savjetovanje.html',
-    '/sudsko-vjestacenje.html'
+    './css/non-critical.css',
+    './config/manifest.json',
+    './knjigovodstvo-racunovodstvo.html',
+    './place-kadrovska-evidencija.html',
+    './financijsko-poslovno-savjetovanje.html',
+    './sudsko-vjestacenje.html'
 ];
 
 self.addEventListener('install', event => {
