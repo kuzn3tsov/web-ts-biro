@@ -21,11 +21,6 @@
 (function () {
     'use strict';
 
-    /**
- * TS-Biro Knjigovodstveni Servis - Glavna JavaScript datoteka
- * All scripts moved to head with defer attribute
- */
-
     // Load non-critical CSS
     function loadNonCriticalCSS() {
         const link = document.createElement('link');
@@ -73,7 +68,7 @@
     function initializeServiceWorker() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
-                navigator.serviceWorker.register('js/service-worker.js')
+                navigator.serviceWorker.register('./service-worker.js')
                     .then(function (registration) {
                         console.log('ServiceWorker registration successful with scope: ', registration.scope);
                     })
@@ -375,13 +370,19 @@
         testimonialsContainer.addEventListener('mouseenter', stopAutoPlay);
         testimonialsContainer.addEventListener('mouseleave', startAutoPlay);
 
-        // Touch swipe support for mobile
+        // Touch swipe support for mobile - FIXED VERSION
         let touchStartX = 0;
         let touchEndX = 0;
 
+        // Fix: Add passive: true to touchstart and touchmove
         testimonialsContainer.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
-        });
+        }, { passive: true });
+
+        testimonialsContainer.addEventListener('touchmove', (e) => {
+            // Optional: Add touchmove handling if needed
+            e.preventDefault(); // Remove this if you want default scroll behavior
+        }, { passive: false }); // Set to false if using preventDefault
 
         testimonialsContainer.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
@@ -676,5 +677,4 @@
     } else {
         init();
     }
-
 })();
