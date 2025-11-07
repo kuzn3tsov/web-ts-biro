@@ -1,5 +1,5 @@
-// service-worker.js - Updated URLs for GitHub Pages
-const CACHE_NAME = 'ts-biro-v4';
+// service-worker.js - Fixed URLs
+const CACHE_NAME = 'ts-biro-v5'; // Increment version
 const CRITICAL_URLS = [
     './',
     './index.html',
@@ -24,7 +24,15 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Caching critical resources');
-                return cache.addAll(CRITICAL_URLS);
+                // Use cache.add() instead of cache.addAll() for better error handling
+                return Promise.all(
+                    CRITICAL_URLS.map(url => {
+                        return cache.add(url).catch(error => {
+                            console.warn(`Failed to cache: ${url}`, error);
+                            // Continue even if some files fail
+                        });
+                    })
+                );
             })
             .then(() => self.skipWaiting())
     );
@@ -48,19 +56,19 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
     if (event.request.method !== 'GET') return;
-    if (!event.request.url.startsWith(self.location.origin)) return;
 
     event.respondWith(
         caches.match(event.request)
             .then(response => {
-                // Return cached version
+                // Return cached version if available
                 if (response) {
                     return response;
                 }
 
+                // Otherwise fetch from network
                 return fetch(event.request).then(response => {
                     // Cache successful responses
-                    if (response.status === 200 && response.type === 'basic') {
+                    if (response.status === 200) {
                         const responseToCache = response.clone();
                         caches.open(CACHE_NAME)
                             .then(cache => {
@@ -72,7 +80,7 @@ self.addEventListener('fetch', event => {
             }).catch(() => {
                 // Fallback for failed requests
                 if (event.request.destination === 'document') {
-                    return caches.match('/index.html');
+                    return caches.match('./index.html');
                 }
             })
     );
