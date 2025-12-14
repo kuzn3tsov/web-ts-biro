@@ -16,6 +16,48 @@
     left: 100%;
 }
 
+/* Logo enhancements - shadow only on hover */
+.logo {
+    position: relative;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: translateY(-1px);
+}
+
+/* Enhanced hover effects for logo */
+.logo:hover img {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+    transform: translateY(-3px);
+}
+
+/* Focus state for accessibility */
+.logo:focus-within img {
+    outline: 2px solid var(--secondary);
+    outline-offset: 4px;
+    border-radius: 4px;
+    filter: drop-shadow(0 4px 12px rgba(218, 165, 32, 0.3));
+}
+
+/* Logo on home page - stronger shadow on hover */
+.home-page .logo:hover img {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25)) drop-shadow(0 0 30px rgba(218, 165, 32, 0.15));
+}
+
+/* Logo when header is transparent */
+header.transparent .logo:hover img {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Logo in mobile menu */
+@media (max-width: 768px) {
+    .logo:hover img {
+        filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+        transform: translateY(-2px);
+    }
+}
+
 /* Navigation enhancements - NIJE kritično */
 .nav-link.active::after {
     content: '';
@@ -1495,6 +1537,12 @@ select[multiple] option:checked {
         margin-left: 0.25rem;
     }
 
+    /* Logo mobile hover */
+    .logo:hover img {
+        filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+        transform: translateY(-2px);
+    }
+
     /* FIXED: Services Grid - 1 column on mobile */
     .services-grid {
         grid-template-columns: 1fr;
@@ -1837,6 +1885,11 @@ select[multiple] option:checked {
     .contact-item::after {
         display: none;
     }
+
+    .logo:hover img {
+        transform: none;
+        filter: none;
+    }
 }
 
 /* Print styles */
@@ -1895,93 +1948,5 @@ select[multiple] option:checked {
         background: none;
         color: var(--dark);
         font-weight: bold;
-    }
-}
-
-/* Logo enhancements - NIJE kritično (loads after render) */
-.logo {
-    position: relative;
-}
-
-/* Subtle glow effect on dark backgrounds */
-.header-scrolled .logo img {
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 20px rgba(218, 165, 32, 0.1));
-}
-
-/* Animation for logo on page load */
-@keyframes logo-float {
-    0% {
-        transform: translateY(0);
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    }
-
-    50% {
-        transform: translateY(-3px);
-        filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
-    }
-
-    100% {
-        transform: translateY(0);
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    }
-}
-
-.logo.loaded img {
-    animation: logo-float 3s ease-in-out 1;
-}
-
-/* Logo focus state for accessibility */
-.logo:focus-within img {
-    outline: 2px solid var(--secondary);
-    outline-offset: 4px;
-    border-radius: 4px;
-    filter: drop-shadow(0 4px 12px rgba(218, 165, 32, 0.3));
-}
-
-/* Logo on home page (can be more prominent) */
-.home-page .logo img {
-    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 25px rgba(218, 165, 32, 0.15));
-}
-
-/* Logo when header is transparent (hero section) */
-header.transparent .logo img {
-    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25));
-}
-
-/* Logo in mobile menu */
-@media (max-width: 768px) {
-    .logo img {
-        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
-    }
-
-    .mobile-menu-btn.active~.logo img {
-        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .logo img {
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-        border: 1px solid var(--dark);
-    }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    .logo:hover img {
-        transform: none;
-    }
-
-    .logo.loaded img {
-        animation: none;
-    }
-}
-
-/* Print styles */
-@media print {
-    .logo img {
-        filter: none !important;
-        box-shadow: none !important;
     }
 }
