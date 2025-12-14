@@ -221,18 +221,21 @@
     </header>
 
     <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" aria-label="Navigacija putanje">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumbs">
         <div class="container">
-            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="./" itemprop="item">
-                        <span itemprop="name">Početna</span>
+            <ol class="breadcrumb-nav" aria-label="Breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="/" class="breadcrumb-link">
+                        <i class="fas fa-home"></i>
+                        <span>Početna</span>
                     </a>
-                    <meta itemprop="position" content="1" />
                 </li>
-                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">Savjetovanje</span>
-                    <meta itemprop="position" content="2" />
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">
+                        <i class="fas fa-hammer"></i>
+                        <span>Savjetovanje</span>
+                    </span>
                 </li>
             </ol>
         </div>
