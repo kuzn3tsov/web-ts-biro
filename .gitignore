@@ -1,0 +1,142 @@
+# ====================================
+# GitHub Actions FTP Deployment
+# ====================================
+.ftp-deploy-sync-state.json
+
+# ====================================
+# Operating System Files
+# ====================================
+# Windows
+Thumbs.db
+.DS_Store
+desktop.ini
+ehthumbs.db
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# ====================================
+# Development & Editor Files
+# ====================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-*
+
+# ====================================
+# cPanel & Hosting Files
+# ====================================
+.cpanel/
+error_log
+access_log
+php.ini
+.user.ini
+stats/
+cgi-bin/
+cpbackup-exclude.conf
+backup-*
+
+# ====================================
+# Environment & Configuration Secrets
+# ====================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+.env.staging
+.env.example
+
+# WordPress specific (if you add it later)
+wp-config.php
+wp-config-sample.php
+
+# ====================================
+# Build Tools & Dependencies
+# ====================================
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# PHP
+vendor/
+composer.lock
+composer.phar
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ====================================
+# Build Output
+# ====================================
+# If you use build tools like Webpack, Gulp, etc.
+dist/
+build/
+out/
+*.min.css
+*.min.css.map
+*.min.js
+*.min.js.map
+
+# ====================================
+# Temporary Files
+# ====================================
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+~$
+
+# ====================================
+# Backup Files
+# ====================================
+*.bak
+*.backup
+*.old
+_old/
+backup/
+backups/
+
+# ====================================
+# Image/Asset Processing
+# ====================================
+# Original source files if you process images
+images/originals/
+images/*.psd
+images/*.ai
+images/*.xd
+images/*.sketch
+
+# ====================================
+# Database Files
+# ====================================
+*.sql
+*.sqlite
+*.db

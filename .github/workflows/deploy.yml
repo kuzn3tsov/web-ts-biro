@@ -26,6 +26,9 @@ jobs:
         protocol: ftp
         local-dir: ./
         server-dir: ${{ secrets.FTP_REMOTE_PATH || '/public_html/' }}
+        # Add these for cPanel compatibility:
+        dangerous-clean-slate: false
+        state-name: .ftp-deploy-sync-state.json
         exclude: |
           **/.git*
           **/.github*
