@@ -1,0 +1,40 @@
+name: Deploy to ts-biro.hr
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: List files (for debugging)
+      run: ls -la
+
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.ftp.ts-biro.hr }}
+        username: ${{ secrets.tsbirohr }}
+        password: ${{ secrets.m5v89F0dHr }}
+        port: 21
+        protocol: ftp
+        local-dir: ./
+        server-dir: ${{ secrets.FTP_REMOTE_PATH || '/public_html/' }}
+        exclude: |
+          **/.git*
+          **/.github*
+          **/node_modules
+          **/*.md
+          README.md
+          .gitignore
+          .env*
+          .env.example
+          docker-compose.yml
+          composer.lock
+          package-lock.json
